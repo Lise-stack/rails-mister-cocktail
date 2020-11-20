@@ -1,0 +1,14 @@
+ <h1>All restaurants</h1>
+  <div container>
+    <div cocktails>
+        <ul class="list-group">
+          <% @cocktails.each do |cocktail| %>
+            <li class="list-group-item">
+              <%= link_to cocktail.name, cocktail_path(cocktail) %>
+            </li>
+          <% end %>
+        </ul>
+    </div>
+
+<%= link_to "Add a new Cocktail", new_cocktail_path, class: 'btn btn-primary' %>
+</div>
